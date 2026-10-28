@@ -179,6 +179,7 @@ void displayRow(uint8_t data) {
   // bit i of data -> ROWi (PB8 + i)
   for (int i = 0; i < 8; i++) {
     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8 << i, ((data >> i) & 1) ? ROW_ON : ROW_OFF);
+
   }
 }
 
